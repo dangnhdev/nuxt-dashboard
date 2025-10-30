@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "bunx concurrently -k -p \"[{name}]\" -n \"NUXT,CONVEX\" -c \"green,magenta\" \"bun dev:nuxt\" \"bun dev:convex\"",
+    "dev:nuxt": "nuxt dev --dotenv .env.local",
+    "dev:convex": "convex dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
@@ -17,6 +19,8 @@
     "@unovis/ts": "^1.6.1",
     "@unovis/vue": "^1.6.1",
     "@vueuse/nuxt": "^13.9.0",
+    "convex": "^1.28.0",
+    "convex-nuxt": "^0.1.5",
     "date-fns": "^4.1.0",
     "nuxt": "^4.2.0",
     "zod": "^4.1.12"
