@@ -3,9 +3,10 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    'nuxt-mongoose',
+    '@nuxt/test-utils/module'
   ],
-
   devtools: {
     enabled: true
   },
@@ -18,6 +19,10 @@ export default defineNuxtConfig({
     }
   },
 
+  devServer: {
+    port: 1313
+  },
+
   compatibilityDate: '2024-07-11',
 
   eslint: {
@@ -27,5 +32,13 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+  mongoose: {
+    uri: process.env.MONGODB_URI,
+    options: {
+      directConnection: true
+    },
+    modelsDir: 'models',
+    devtools: true
   }
 })
