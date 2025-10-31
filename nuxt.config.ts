@@ -13,6 +13,14 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    mongodbUri: '',
+    bitBrowser: {
+      apiUrl: '',
+      apiToken: ''
+    }
+  },
+
   routeRules: {
     '/api/**': {
       cors: true
@@ -34,7 +42,7 @@ export default defineNuxtConfig({
     }
   },
   mongoose: {
-    uri: process.env.MONGODB_URI,
+    uri: process.env.NUXT_MONGODB_URI,
     options: {
       directConnection: true
     },

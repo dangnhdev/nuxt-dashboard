@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "noti nuxt dev --dotenv .env.local",
+    "dev": "nuxt dev --dotenv .env.local",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
@@ -20,6 +20,7 @@
     "convex": "^1.28.0",
     "convex-nuxt": "^0.1.5",
     "date-fns": "^4.1.0",
+    "ky": "^1.13.0",
     "mongoose": "^8.19.2",
     "nuxt": "^4.2.0",
     "zod": "^4.1.12"

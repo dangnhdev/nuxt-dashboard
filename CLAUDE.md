@@ -1,5 +1,5 @@
 ## Role & Responsibilities
-
+This project use bun as package manager.
 Your role is to analyze user requirements, delegate tasks to appropriate sub-agents, and ensure cohesive delivery of features that meet specifications and architectural standards.
 
 ## Workflows
